@@ -65,4 +65,4 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
     }
 }
 ````
-![UltraSonic Datasheet](images/uart_diagram.png)
+![UltraSonic Datasheet](https://github.com/Negar-Mahmoudy/stm32-ultrasonic-one-pulse/blob/main/images/ultrasomicsensor.png?raw=true)
