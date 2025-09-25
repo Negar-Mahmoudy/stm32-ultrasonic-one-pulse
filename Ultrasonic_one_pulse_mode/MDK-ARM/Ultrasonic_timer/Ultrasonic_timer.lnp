@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"ultrasonic_timer\startup_stm32f103xb.o"
+"ultrasonic_timer\main.o"
+"ultrasonic_timer\stm32f1xx_it.o"
+"ultrasonic_timer\stm32f1xx_hal_msp.o"
+"ultrasonic_timer\stm32f1xx_hal_gpio_ex.o"
+"ultrasonic_timer\stm32f1xx_hal_tim.o"
+"ultrasonic_timer\stm32f1xx_hal_tim_ex.o"
+"ultrasonic_timer\stm32f1xx_hal.o"
+"ultrasonic_timer\stm32f1xx_hal_rcc.o"
+"ultrasonic_timer\stm32f1xx_hal_rcc_ex.o"
+"ultrasonic_timer\stm32f1xx_hal_gpio.o"
+"ultrasonic_timer\stm32f1xx_hal_dma.o"
+"ultrasonic_timer\stm32f1xx_hal_cortex.o"
+"ultrasonic_timer\stm32f1xx_hal_pwr.o"
+"ultrasonic_timer\stm32f1xx_hal_flash.o"
+"ultrasonic_timer\stm32f1xx_hal_flash_ex.o"
+"ultrasonic_timer\stm32f1xx_hal_exti.o"
+"ultrasonic_timer\stm32f1xx_hal_uart.o"
+"ultrasonic_timer\system_stm32f1xx.o"
+--strict --scatter "Ultrasonic_timer\Ultrasonic_timer.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Ultrasonic_timer.map" -o Ultrasonic_timer\Ultrasonic_timer.axf
