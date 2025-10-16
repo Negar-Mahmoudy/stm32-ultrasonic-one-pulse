@@ -11,8 +11,7 @@ In this version, the distance is measured continuously using a PWM signal. A pul
 - Continuous measurement
 - Suitable for real-time distance monitoring
 - Higher power consumption due to continuous PWM generation
-
-### **Implementation Highlights**
+- 
 - **Timer 3 (PWM output)**: Generates a 12µs high pulse every 50ms on the Trigger pin.
 - **Timer 4 (Input Capture)**: Measures the duration of the high pulse on the Echo pin.
 - **Distance Calculation**: `distance = duty_cycle * 340 * 100 / 2`
@@ -29,7 +28,6 @@ This version optimizes power consumption by measuring distance only when a butto
 - Low power consumption
 - One-Pulse mode prevents multiple triggers due to button noise
 
-### **Implementation Highlights**
 - **Timer 2 (One-Pulse Mode, PWM output)**: Generates a pulse when the button is pressed. ARR = 50ms, OCR ~12µs.
 - **Trigger Source**: Button input via ETR pin (external trigger for the slave timer).
 - **Timer 4 (Input Capture)**: Measures the high time on Echo pin.
@@ -45,8 +43,8 @@ This version optimizes power consumption by measuring distance only when a butto
 | Measurement Mode | Continuous PWM | One-Pulse Mode with Key Trigger |
 | Power Consumption | Higher | Lower |
 | Timer Usage | Timer3 PWM + Timer4 Input Capture | Timer2 One-Pulse + Timer4 Input Capture |
-| Trigger Source | Continuous PWM | External (button) via ETR |
-| Response to Trigger Noise | N/A | Handled by One-Pulse mode |
+| Trigger Source | Continuous PWM | External (button) |
+| Response to Trigger Noise |    | Handled by One-Pulse mode |
 | Use Case | Continuous monitoring | Event-based / battery-efficient monitoring |
 
 ---
